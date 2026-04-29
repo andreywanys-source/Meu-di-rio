@@ -375,13 +375,20 @@
             document.getElementById('streak-count').innerText = state.streak;
             applyTheme(); renderTasks(); renderHabits(); renderIdeas(); updateLevel(); renderHealth();
 
+                    window.onload = () => {
+            // Mantém suas funções de carregar dados
+            if(typeof state !== 'undefined'){
+                if(document.getElementById('user-age')) document.getElementById('user-age').value = state.age;
+                if(document.getElementById('diary-area')) document.getElementById('diary-area').value = state.diaryEntry;
+                if(document.getElementById('streak-count')) document.getElementById('streak-count').innerText = state.streak;
+                applyTheme(); renderTasks(); renderHabits(); renderIdeas(); updateLevel(); renderHealth();
+            }
+
+            // OBRIGATÓRIO PARA BAIXAR NO CELULAR:
             if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(() => console.log('App pronto para instalar!'))
-                    .catch(err => console.log('Erro no registro:', err));
+                navigator.serviceWorker.register('./sw.js');
             }
         };
     </script>
 </body>
 </html>
-
