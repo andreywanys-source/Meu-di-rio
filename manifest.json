@@ -1,17 +1,15 @@
 {
-  "name": "My Life",
-  "short_name": "My Life",
-  "description": "Seu ciclo, seu equilíbrio",
-  "start_url": "./index.html",
+  "name": "Meu Aplicativo",
+  "short_name": "App",
+  "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#fff1f2",
-  "theme_color": "#fb7185",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
   "icons": [
     {
       "src": "icon.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
   ]
 }
